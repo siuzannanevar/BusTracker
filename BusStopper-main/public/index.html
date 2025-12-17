@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BusTracker</title>
+
+    <!-- jQuery UI (for autocomplete) -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="bi bi-bus-front"></i>
+            <span>BusTracker</span>
+        </div>
+        <p class="subtitle">Find buses fast</p>
+    </aside>
+
+    <main class="content">
+        <div class="card">
+            <div class="field">
+                <label>Region</label>
+                <input id="regionInput" placeholder="Enter region">
+            </div>
+
+            <div class="field">
+                <label>Bus Stop</label>
+                <input id="stopInput" placeholder="Enter bus stop">
+            </div>
+
+            <div class="actions">
+                <button id="searchBuses" class="primary">
+                    <i class="bi bi-search"></i> Search
+                </button>
+
+                <button id="findNearest" class="info">
+                    <i class="bi bi-geo-alt"></i> Nearest
+                </button>
+
+                <button id="clearSelection" class="secondary">
+                    <i class="bi bi-x-circle"></i> Clear
+                </button>
+            </div>
+        </div>
+
+        <div class="results">
+            <div id="busList"></div>
+            <div id="busTimes"></div>
+        </div>
+    </main>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
