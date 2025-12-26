@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
-const PORT = 3000;
-app.listen(PORT, () => {
-    console.log(`Server started on http://localhost:${PORT}`);
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`BusTracker_Siuzanna started on port ${PORT}`);
 });
